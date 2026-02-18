@@ -1,53 +1,81 @@
-# Starlight Starter Kit: Tailwind + Mermaid
+﻿# Starlight Starter Kit: Tailwind + Mermaid
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
+Template de documentación basado en [Astro Starlight](https://starlight.astro.build/) con soporte integrado para **Tailwind CSS v4** y **Mermaid** (diagramas).
+
+##  Características
+
+- **[Astro Starlight](https://starlight.astro.build/)**  Framework de documentación con soporte para temas claros/oscuros, barra lateral, búsqueda y más.
+- **[Tailwind CSS v4](https://tailwindcss.com/)**  Utilidades CSS via `@tailwindcss/vite`. Personaliza el diseño en `src/styles/global.css`.
+- **[astro-mermaid](https://github.com/sherwinshen/astro-mermaid)**  Renderizado de diagramas Mermaid directamente en Markdown/MDX.
+  - Tema `forest` con `autoTheme` (se adapta al modo claro/oscuro).
+  - Curvas de estilo `basis` en flowcharts.
+  - Icon packs incluidos: `logos` e `iconoir` (via Iconify).
+- **[@mermaid-js/layout-elk](https://www.npmjs.com/package/@mermaid-js/layout-elk)**  Motor de layout ELK para diagramas complejos.
+
+##  Estructura del proyecto
+
 ```
-pnpm create astro@latest -- --template starlight/tailwind
+ public/
+ src/
+    assets/
+    content/
+       docs/
+           index.mdx
+           guides/
+           reference/
+    styles/
+       global.css
+    content.config.ts
+ astro.config.mjs
+ package.json
+ tsconfig.json
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Starlight detecta archivos `.md` y `.mdx` dentro de `src/content/docs/`. Cada archivo se expone como una ruta basada en su nombre.
 
-## 🚀 Project Structure
+##  Uso de Mermaid
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+Escribe diagramas directamente en tus archivos `.md` o `.mdx` con bloques de código `mermaid`:
 
+````md
+```mermaid
+flowchart LR
+    A[Inicio] --> B{¿Condición?}
+    B -- Sí --> C[Resultado A]
+    B -- No --> D[Resultado B]
 ```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   ├── styles/
-│   │   └── global.css
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+````
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+##  Comandos
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+Todos los comandos se ejecutan desde la raíz del proyecto:
 
-Static assets, like favicons, can be placed in the `public/` directory.
+| Comando                | Acción                                             |
+| :--------------------- | :------------------------------------------------- |
+| `pnpm install`         | Instala las dependencias                           |
+| `pnpm dev`             | Inicia el servidor local en `localhost:4321`       |
+| `pnpm build`           | Genera el sitio de producción en `./dist/`         |
+| `pnpm preview`         | Previsualiza el build antes de desplegar           |
 
-The project includes [Tailwind CSS](https://starlight.astro.build/guides/css-and-tailwind/#tailwind-css) for styling. Customize your design by modifying `src/styles/global.css`.
+##  Dependencias principales
 
-## 🧞 Commands
+| Paquete                      | Versión | Rol                              |
+| :--------------------------- | :------ | :------------------------------- |
+| `astro`                      | ^5.17   | Framework base                   |
+| `@astrojs/starlight`         | ^0.37   | Tema de documentación            |
+| `@astrojs/starlight-tailwind` | ^4.0   | Integración Starlight + Tailwind |
+| `tailwindcss`                | ^4.1    | Framework CSS                    |
+| `@tailwindcss/vite`          | ^4.1    | Plugin Vite para Tailwind v4     |
+| `astro-mermaid`              | ^1.3    | Integración de diagramas Mermaid |
+| `mermaid`                    | ^11.12  | Motor de diagramas               |
+| `@mermaid-js/layout-elk`     | ^0.2    | Layout ELK para Mermaid          |
 
-All commands are run from the root of the project, from a terminal:
+##  Recursos
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- [Documentación de Starlight](https://starlight.astro.build/)
+- [Documentación de Astro](https://docs.astro.build)
+- [Tailwind CSS v4](https://tailwindcss.com/docs)
+- [Sintaxis de Mermaid](https://mermaid.js.org/syntax/flowchart.html)
+- [Astro Mermaid Plugin](https://github.com/joesaby/astro-mermaid)
