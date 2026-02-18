@@ -1,4 +1,5 @@
-﻿# starmaid-template
+﻿# Starlight Starter Kit: Tailwind + Mermaid
+
 
 Documentation template powered by [Astro Starlight](https://starlight.astro.build/) with built-in support for **Tailwind CSS v4** and **Mermaid** diagrams.
 
