@@ -18,21 +18,20 @@ Documentation template powered by [Astro Starlight](https://starlight.astro.buil
 ##  Project Structure
 
 ```
-.
- public/
- src/
-    assets/
-    content/
-       docs/
-           index.mdx
-           guides/
-           reference/
-    styles/
-       global.css
-    content.config.ts
- astro.config.mjs
- package.json
- tsconfig.json
+├── public/
+├── src/
+│   ├── assets/
+│   ├── content/
+│   │   └── docs/
+│   │       ├── index.mdx
+│   │       ├── guides/
+│   │       └── reference/
+│   ├── styles/
+│   │   └── global.css
+│   └── content.config.ts
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
 Starlight picks up `.md` and `.mdx` files inside `src/content/docs/`. Each file is exposed as a route based on its filename.
@@ -60,8 +59,6 @@ All commands are run from the root of the project:
 | `pnpm dev`             | Start local dev server at `localhost:4321`   |
 | `pnpm build`           | Build the production site to `./dist/`       |
 | `pnpm preview`         | Preview the build locally before deploying   |
-| `pnpm astro ...`       | Run Astro CLI commands                       |
-| `pnpm astro -- --help` | Get help using the Astro CLI                 |
 
 ##  Main Dependencies
 

@@ -18,7 +18,6 @@ Template de documentación basado en [Astro Starlight](https://starlight.astro.b
 ## 🚀 Estructura del proyecto
 
 ```
-.
 ├── public/
 ├── src/
 │   ├── assets/
@@ -60,8 +59,6 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 | `pnpm dev`             | Inicia el servidor local en `localhost:4321`       |
 | `pnpm build`           | Genera el sitio de producción en `./dist/`         |
 | `pnpm preview`         | Previsualiza el build antes de desplegar           |
-| `pnpm astro ...`       | Ejecuta comandos del CLI de Astro                  |
-| `pnpm astro -- --help` | Ayuda del CLI de Astro                             |
 
 ## 📦 Dependencias principales
 
