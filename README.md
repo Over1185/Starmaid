@@ -9,7 +9,7 @@ Documentation template powered by [Astro Starlight](https://starlight.astro.buil
 
 - **[Astro Starlight](https://starlight.astro.build/)**  Documentation framework with light/dark theme support, sidebar, search, and more.
 - **[Tailwind CSS v4](https://tailwindcss.com/)**  CSS utilities via `@tailwindcss/vite`. Customize your design in `src/styles/global.css`.
-- **[astro-mermaid](https://github.com/sherwinshen/astro-mermaid)**  Render Mermaid diagrams directly in Markdown/MDX files.
+- **[astro-mermaid](https://github.com/joesaby/astro-mermaid)**  Render Mermaid diagrams directly in Markdown/MDX files.
   - `forest` theme with `autoTheme` (adapts to light/dark mode automatically).
   - `basis` curve style for flowcharts.
   - Included icon packs: `logos` and `iconoir` (via Iconify).
