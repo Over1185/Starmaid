@@ -1,0 +1,47 @@
+name: Refresh lockfiles
+
+on:
+    schedule:
+        - cron: "15 6 * * 1"
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    refresh-lockfiles:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
+              with:
+                  bun-version: latest
+
+            - name: Refresh npm lockfile
+              run: npm install --package-lock-only
+
+            - name: Refresh pnpm lockfile
+              run: pnpm install --lockfile-only
+
+            - name: Refresh bun lockfile
+              run: bun install --lockfile-only
+
+            - name: Commit updated lockfiles
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "chore(lockfiles): refresh weekly lockfiles"
+                  file_pattern: "bun.lock package-lock.json pnpm-lock.yaml"
