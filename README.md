@@ -30,6 +30,10 @@ Documentation template powered by [Astro Starlight](https://starlight.astro.buil
 │   │   └── global.css
 │   └── content.config.ts
 ├── astro.config.mjs
+├── bun.lock
+├── package-lock.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
 ├── package.json
 └── tsconfig.json
 ```
@@ -53,12 +57,26 @@ flowchart LR
 
 All commands are run from the root of the project:
 
-| Command                | Action                                       |
+| [PNPM](https://pnpm.io/installation)| Action                          |
 | :--------------------- | :------------------------------------------- |
 | `pnpm install`         | Install dependencies                         |
 | `pnpm dev`             | Start local dev server at `localhost:4321`   |
 | `pnpm build`           | Build the production site to `./dist/`       |
 | `pnpm preview`         | Preview the build locally before deploying   |
+
+| [NPM](https://nodejs.org/en/download)| Action                          |
+| :--------------------- | :------------------------------------------- |
+| `npm install`         | Install dependencies                         |
+| `npm dev`             | Start local dev server at `localhost:4321`   |
+| `npm build`           | Build the production site to `./dist/`       |
+| `npm preview`         | Preview the build locally before deploying   |
+
+| [BUN](https://bun.com/docs/installation)| Action                          |
+| :--------------------- | :------------------------------------------- |
+| `bun install`         | Install dependencies                         |
+| `bun dev`             | Start local dev server at `localhost:4321`   |
+| `bun build`           | Build the production site to `./dist/`       |
+| `bun preview`         | Preview the build locally before deploying   |
 
 ##  Main Dependencies
 

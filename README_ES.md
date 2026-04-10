@@ -30,6 +30,10 @@ Template de documentación basado en [Astro Starlight](https://starlight.astro.b
 │   │   └── global.css
 │   └── content.config.ts
 ├── astro.config.mjs
+├── bun.lock
+├── package-lock.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
 ├── package.json
 └── tsconfig.json
 ```
@@ -53,12 +57,26 @@ flowchart LR
 
 Todos los comandos se ejecutan desde la raíz del proyecto:
 
-| Comando                | Acción                                             |
+| [PNPM](https://pnpm.io/installation)| Action                          |
 | :--------------------- | :------------------------------------------------- |
 | `pnpm install`         | Instala las dependencias                           |
 | `pnpm dev`             | Inicia el servidor local en `localhost:4321`       |
 | `pnpm build`           | Genera el sitio de producción en `./dist/`         |
 | `pnpm preview`         | Previsualiza el build antes de desplegar           |
+
+| [NPM](https://nodejs.org/en/download)| Action                          |
+| :--------------------- | :------------------------------------------------- |
+| `npm install`         | Instala las dependencias                           |
+| `npm dev`             | Inicia el servidor local en `localhost:4321`       |
+| `npm build`           | Genera el sitio de producción en `./dist/`         |
+| `npm preview`         | Previsualiza el build antes de desplegar           |
+
+| [BUN](https://bun.com/docs/installation)| Action                          |
+| :--------------------- | :------------------------------------------------- |
+| `bun install`         | Instala las dependencias                           |
+| `bun dev`             | Inicia el servidor local en `localhost:4321`       |
+| `bun build`           | Genera el sitio de producción en `./dist/`         |
+| `bun preview`         | Previsualiza el build antes de desplegar           |
 
 ## 📦 Dependencias principales
 
